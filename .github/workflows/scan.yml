@@ -1,0 +1,14 @@
+name: Backend Aqua Scan (via shared component)
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  call-shared:
+    uses: your-org/ci-aqua-scan/.github/workflows/aqua-scan.yml@main
+    secrets:
+      AQUA_KEY: ${{ secrets.AQUA_KEY }}
+      AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
+    with:
+      scan_path: "."
