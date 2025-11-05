@@ -9,7 +9,7 @@ on:
 
 jobs:
   include-aqua:
-    uses: fatimaworktest/ci-aqua-component/.github/workflows/aqua-scan.yml@main
+    uses: fatimaworktest/ci-aqua-scan/.github/workflows/aqua-scan.yml@main
     secrets:
       AQUA_KEY: ${{ secrets.AQUA_KEY }}
       AQUA_SECRET: ${{ secrets.AQUA_SECRET }}
